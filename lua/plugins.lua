@@ -15,4 +15,5 @@ packer.startup(function(use)
     }
     use 'hoob3rt/lualine.nvim' -- Status line
     use 'windwp/nvim-autopairs'
+    use 'norcalli/nvim-colorizer.lua'
 end)
