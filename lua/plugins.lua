@@ -13,7 +13,8 @@ packer.startup(function(use)
         'svrana/neosolarized.nvim',
         requires = { 'tjdevries/colorbuddy.nvim' }
     }
-    use 'hoob3rt/lualine.nvim' -- Status line
+    use 'hoob2rt/lualine.nvim' -- Status line
     use 'windwp/nvim-autopairs'
     use 'norcalli/nvim-colorizer.lua'
 end)
+

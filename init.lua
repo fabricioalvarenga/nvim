@@ -1,7 +1,7 @@
 require('base')
 require('highlights')
 require('maps')
-require('plugins')
+--require('plugins') -- Comment this line to don't install plugins
 
 local has = function(x)
     return vim.fn.has(x) == 1
