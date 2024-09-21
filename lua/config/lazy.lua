@@ -24,4 +24,5 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     require("plugins.lsp"),
     require("plugins.colorscheme"),
+    require("plugins.codecompletion"),
 })
