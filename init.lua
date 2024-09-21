@@ -1,7 +1,7 @@
-require('base')
-require('highlights')
-require('maps')
---require('plugins') -- Comment this line to don't install plugins
+require('config.lazy')
+require('config.base')
+require('config.highlights')
+require('config.maps')
 
 local has = function(x)
     return vim.fn.has(x) == 1
@@ -11,8 +11,10 @@ local is_mac = has "macunix"
 local is_win = has "win32"
 
 if is_mac then
-    require('macos')
+    require('config.macos')
 end
 if is_win then
-    require('windows')
+    require('config.windows')
 end
+
+
