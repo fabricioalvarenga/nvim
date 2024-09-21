@@ -22,5 +22,6 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-    {"neovim/nvim-lspconfig"}
+    require("plugins.lsp"),
+    require("plugins.colorscheme"),
 })

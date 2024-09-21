@@ -1,7 +1,7 @@
-require('config.lazy')
-require('config.base')
-require('config.highlights')
-require('config.maps')
+require("config.lazy")
+require("config.base")
+require("config.maps")
+--require('config.highlights')
 
 local has = function(x)
     return vim.fn.has(x) == 1
@@ -11,10 +11,10 @@ local is_mac = has "macunix"
 local is_win = has "win32"
 
 if is_mac then
-    require('config.macos')
+    require("config.macos")
 end
 if is_win then
-    require('config.windows')
+    require("config.windows")
 end
 
 
