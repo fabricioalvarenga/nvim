@@ -4,7 +4,6 @@ return {
 
         config = function()
             local lspconfig = require("lspconfig")
-
             lspconfig.sourcekit.setup({
                 -- Set the project's root_dir dynamically
         		root_dir = lspconfig.util.root_pattern("*.xcodeproj", "Package.swift", ".git")(fname) or lspconfig.util.path.dirname(fname),
