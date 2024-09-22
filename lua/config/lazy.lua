@@ -24,13 +24,13 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
         -- Add LaxyVim 
-        { "LazyVim/LazyVim", },
+        { "LazyVim/LazyVim" },
 
         -- Import your plugins
         { import = "plugins.lsp" },
         { import = "plugins.codecompletion" },
-        { import = "plugins.lualine" },
         { import = "plugins.colorscheme" },
+        { import = "plugins.lualine" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
@@ -47,6 +47,7 @@ require("lazy").setup({
     },
     checker = {
         enabled = true, -- Check for plugin updates periodically
-        notify = true, -- Notify on update
+        notify = false, -- Notify on update
     },
 })
+
