@@ -51,11 +51,14 @@ require("lazy").setup({
     },
 })
 
--- Start lualine plugin
+-- Start lualine plugin (I couldn't start it from the lualine.lua file)
 require("lualine").setup({
     options = {
         icons_enabled = true,
         theme = "material",
+--        theme = "nightfly",
+--        theme = "onedark",
+--        theme = "palenight",
         component_separators = { left = "", right = ""},
         section_separators = { left = "", right = ""},
         disabled_filetypes = {
@@ -82,7 +85,7 @@ require("lualine").setup({
     inactive_sections = {
       lualine_a = {},
       lualine_b = {},
-      lualine_c = { "filename" },
+      lualine_c = { { "filename", path = 3 } },
       lualine_x = { "location" },
       lualine_y = {},
       lualine_z = {}
