@@ -57,9 +57,6 @@ require("lualine").setup({
     options = {
         icons_enabled = true,
         theme = "material",
---        theme = "nightfly",
---        theme = "onedark",
---        theme = "palenight",
         component_separators = { left = "", right = ""},
         section_separators = { left = "", right = ""},
         disabled_filetypes = {
@@ -78,7 +75,7 @@ require("lualine").setup({
     sections = {
       lualine_a = { "mode" },
       lualine_b = { "branch", "diagnostics" },
-      lualine_c = { { "filename", path = 3 } },
+      lualine_c = { { "filename", file_status = true, path = 3 } },
       lualine_x = { "encoding", "fileformat", "filetype" },
       lualine_y = { "progress" },
       lualine_z = { "location" }
