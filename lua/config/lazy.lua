@@ -31,6 +31,7 @@ require("lazy").setup({
         { import = "plugins.codecompletion" },
         { import = "plugins.colorscheme" },
         { import = "plugins.lualine" },
+        { import = "plugins.autopairs" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
@@ -42,12 +43,12 @@ require("lazy").setup({
         lazy = false,
         -- It's recommended to leave version=false for now, since a lot the plugin that suport versioning,
         -- have outdated releases, wich may break your Neovim install.
-        version = false, -- Always use the latest git commit
-        -- version = "*", -- Try installing the latest stable version for plugins that support semver
+        version = false, -- always use the latest git commit
+        -- version = "*", -- try installing the latest stable version for plugins that support semver
     },
     checker = {
-        enabled = true, -- Check for plugin updates periodically
-        notify = false, -- Notify on update
+        enabled = true, -- check for plugin updates periodically
+        notify = false, -- notify on update
     },
 })
 

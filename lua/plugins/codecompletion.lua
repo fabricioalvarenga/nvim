@@ -22,9 +22,9 @@ return {
                     [ "<CR>" ] = cmp.mapping.confirm({ select = true }),
                     [ "<tab>" ] = cmp.mapping(function(original)
                         if cmp.visible() then
-                            cmp.select_next_item() -- Run completion selection if completing
+                            cmp.select_next_item() -- run completion selection if completing
                         else
-                            original() -- Run the original behavior if no completing
+                            original() -- run the original behavior if no completing
                         end
                     end, { "i", "s" }),
                     [ "<S-tab>" ] = cmp.mapping(function(original)

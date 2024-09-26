@@ -21,11 +21,11 @@ vim.opt.smarttab = true
 vim.opt.breakindent = true
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
-vim.opt.ai = true -- Auto indent
-vim.opt.si = true -- Smart indent
-vim.opt.wrap = false -- No wrap lines
+vim.opt.ai = true -- auto indent
+vim.opt.si = true -- smart indent
+vim.opt.wrap = false -- no wrap lines
 vim.opt.backspace = "start,eol,indent"
-vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
+vim.opt.path:append { '**' } -- finding files - search down into subfolders
 vim.opt.wildignore:append { "*/node_modules/*" }
 
 -- Turn off paste mode when leaving insert
