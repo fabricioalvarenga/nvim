@@ -5,9 +5,6 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
 
-            -- Configure Pyright
-            lspconfig.pyright.setup({})
-
             -- Configure Swift
             lspconfig.sourcekit.setup({
                 -- Set the project's root_dir dynamically
@@ -37,7 +34,27 @@ return {
                 end
             end
 
-            -- Check if lua-language-server is installed
+            -- Check if pyright is installed
+            if not is_command_available("basedpyright") then
+                io.stdout:write("basedpyright is not installed. Installing it via homebrew...")
+                Status, Exit_Code, Code = os.execute("brew install basedpyright")
+            end
+
+            -- Configure Pyright
+            lspconfig.basedpyright.setup({
+                settings = {
+                    basedpyright = {
+                        analysis = {
+                            diagnosticMode = "openFilesOnly",
+                            inlayHints = {
+                                callArgumentNames = true
+                            }
+                        }
+                    }
+                }
+            })
+
+           -- Check if lua-language-server is installed
             if not is_command_available("lua-language-server") then
                 io.stdout:write("lua-language-server is not installed. Installing it via homebrew...")
                 Status, Exit_Code, Code = os.execute("brew install lua-language-server")
