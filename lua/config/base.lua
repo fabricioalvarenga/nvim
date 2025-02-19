@@ -32,7 +32,7 @@ vim.opt.wildignore:append { "*/node_modules/*" }
 vim.api.nvim_create_autocmd("InsertLeave", {
     pattern = "*",
     command = "set nopaste"
-}) 
+})
 
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { "r" }

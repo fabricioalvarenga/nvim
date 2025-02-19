@@ -2,6 +2,13 @@ return {
     {
         "neovim/nvim-lspconfig",
 
+        -- Configure Pyright
+        opts = {
+            servers = {
+                pyright = {}
+            }
+        },
+
         config = function()
             local lspconfig = require("lspconfig")
 
