@@ -60,7 +60,7 @@ return {
                 Status, Exit_Code, Code = os.execute("brew install lua-language-server")
             end
 
-            -- Configure lua-language-server if it is installed
+            -- Configure lua-language-server 
             lspconfig.lua_ls.setup({
                 on_init = function(client)
                     if client.workspace_folders then
