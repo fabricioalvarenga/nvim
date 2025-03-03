@@ -32,6 +32,7 @@ require("lazy").setup({
         { import = "plugins.colorscheme" },
         { import = "plugins.lualine" },
         { import = "plugins.autopairs" },
+        { import = "plugins.nvim-tree" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
