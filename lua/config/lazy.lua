@@ -33,6 +33,7 @@ require("lazy").setup({
         { import = "plugins.lualine" },
         { import = "plugins.autopairs" },
         { import = "plugins.nvim-tree" },
+        { import = "plugins.indentation" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
