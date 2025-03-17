@@ -27,7 +27,7 @@ require("lazy").setup({
         { "LazyVim/LazyVim" },
 
         -- Import plugins
-        { import = "plugins.lsp" },
+        { import = "plugins.lsp.lsp" },
         { import = "plugins.codecompletion" },
         { import = "plugins.colorscheme" },
         { import = "plugins.lualine" },
