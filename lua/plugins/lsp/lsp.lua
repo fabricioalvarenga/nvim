@@ -16,6 +16,7 @@ return {
         require("plugins.lsp.lsp-lua"),
         require("plugins.lsp.lsp-swift"),
         require("plugins.lsp.lsp-python"),
+        require("plugins.lsp.lsp-c"),
     }
 }
 
