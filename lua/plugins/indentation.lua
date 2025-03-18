@@ -1,13 +1,11 @@
 return {
-    {
-        "lukas-reineke/indent-blankline.nvim",
-        main = "ibl",
-        opts = {},
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
 
-        config = function()
-            local indent = require("ibl")
+    config = function()
+        local indent = require("ibl")
 
-            indent.setup({})
-        end,
-    }
+        indent.setup({})
+    end,
 }

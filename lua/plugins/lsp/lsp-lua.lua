@@ -1,47 +1,45 @@
-return {
-    "neovim/nvim-lspconfig",
+local LSP = {}
 
-    config = function()
-        local lspconfig = require("lspconfig")
+function LSP.setup(lspconfig)
+   -- Check if lua-language-server is installed
+    if vim.fn.executable("lua-language-server") == 0 then
+        vim.notify("lua-language-server is not installed. Install it with: brew install lua-language-server", vim.log.levels.WARN)
+        return
+    end
 
-       -- Check if lua-language-server is installed
-        if vim.fn.executable("lua-language-server") == 0 then
-            vim.notify("lua-language-server is not installed. Install it with: brew install lua-language-server", vim.log.levels.WARN)
-            return
-        end
+    -- Configure lua-language-server 
+    lspconfig.lua_ls.setup({
+        on_init = function(client)
+            if client.workspace_folders then
+                local path = client.workspace_folders[1].name
 
-        -- Configure lua-language-server 
-        lspconfig.lua_ls.setup({
-            on_init = function(client)
-                if client.workspace_folders then
-                    local path = client.workspace_folders[1].name
-
-                    if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
-                        return
-                    end
+                if vim.loop.fs_stat(path..'/.luarc.json') or vim.loop.fs_stat(path..'/.luarc.jsonc') then
+                    return
                 end
+            end
 
-                client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
-                    runtime = {
-                        -- Tell the language server which version of Lua you're using
-                        -- (most likely LuaJIT in the case of Neovim)
-                        version = 'LuaJIT'
-                    },
-                    -- Make the server aware of Neovim runtime files
-                    workspace = {
-                        checkThirdParty = false,
-                        library = {
-                            vim.env.VIMRUNTIME
-                            -- Depending on the usage, you might want to add additional paths here.
-                            -- "${3rd}/luv/library"
-                            -- "${3rd}/busted/library",
-                        }
-                        -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
-                        -- library = vim.api.nvim_get_runtime_file("", true)
+            client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+                runtime = {
+                    -- Tell the language server which version of Lua you're using
+                    -- (most likely LuaJIT in the case of Neovim)
+                    version = 'LuaJIT'
+                },
+                -- Make the server aware of Neovim runtime files
+                workspace = {
+                    checkThirdParty = false,
+                    library = {
+                        vim.env.VIMRUNTIME
+                        -- Depending on the usage, you might want to add additional paths here.
+                        -- "${3rd}/luv/library"
+                        -- "${3rd}/busted/library",
                     }
-                })
-            end,
-            settings = { Lua = {} }
-        })
-    end,
-}
+                    -- or pull in all of 'runtimepath'. NOTE: this is a lot slower
+                    -- library = vim.api.nvim_get_runtime_file("", true)
+                }
+            })
+        end,
+        settings = { Lua = {} }
+    })
+end
+
+return LSP
