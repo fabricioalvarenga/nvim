@@ -14,6 +14,8 @@ function LSP.setup(lspconfig)
             basedpyright = {
                 analysis = {
                     diagnosticMode = "openFilesOnly",
+                    typeCheckingMode = "basic",
+--                    typeCheckinMode = "strict",
                     inlayHints = {
                         callArgumentNames = true
                     }
