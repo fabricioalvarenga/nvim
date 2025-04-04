@@ -39,3 +39,19 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Open file explorer
 keymap.set("n", "ex", ":Ex<Return>", opts)
+
+-- nvim-tree plugin
+keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current filed" })
+keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
+keymap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
+
+-- nvim-spectre plugin
+keymap.set("n", "<leader>ss", function()
+   require("spectre").open()
+end, { desc = "Open Spectre"})
+
+keymap.set("n", "<leader>sf", function()
+require("spectre").open_file_search()
+end, { desc = "Search on current file"})
+
