@@ -17,16 +17,23 @@ return {
     config = function()
         local spectre = require("spectre")
 
+        -- Defines text color of search and replace
+        -- Uses a small delay (100 miliseconds) to ensure that the colors will be set. Without this delay the colors were not changing.
+        vim.defer_fn(function()
+            vim.api.nvim_set_hl(0, "SpectreSearch", { fg = "#ffffff", bg = "#e74c3c", bold = true })
+            vim.api.nvim_set_hl(0, "SpectreReplace", { fg = "#ffffff", bg = "#2ecc71", bold = true })
+            vim.api.nvim_set_hl(0, "SpectreLine", { bg = "#2ecc71" })
+        end, 100)
+
         spectre.setup({
             result_padding = "",
+
+            -- Set text color of search and replace
+            highlight = {
+                search = "SpectreSearch",
+                replace = "SpectreReplace",
+                line = "SpectreLine",
+            },
         })
-
-        -- Set keymap to open Spectre
-        local keymap = vim.keymap
-
-        keymap.set("n", "<leader>ss", function()
-            spectre.open()
-        end, { desc = "Open Spectre"}
-        )
     end,
 }
