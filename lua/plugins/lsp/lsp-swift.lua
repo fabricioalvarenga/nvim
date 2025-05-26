@@ -3,11 +3,27 @@ local LSP = {}
 function LSP.setup(lspconfig)
     -- Configure Swift
     lspconfig.sourcekit.setup({
-        -- Set the project's root_dir dynamically
-        root_dir = function(fname)
-            return lspconfig.util.root_pattern("*.xcodeproj", "Package.swift", ".git")(fname) or lspconfig.util.path.dirname(fname)
+        cmd = { "sourcekit-lsp" },
+        filetypes = { "swfit", "c", "cpp", "objective-c", "objective-cpp" },
+        root_dir = function(filename)
+            return require("lspconfig.util").root_pattern(
+                "*.xcworkspace",
+                "*.xcodeproj",
+                "Package.swift",
+                ".git"
+            )(filename)
         end,
-
+        -- init_options = {
+        --     compilationDatabase = vim.fn.getcwd() .. "/compile_commands.json"
+        -- }, 
+        settings = { 
+            sourcekit_lsp = {
+                index = {
+                    enable = true,
+                    store_in_memory = false,
+                },
+            },
+        },
         capabilities = {
             workspace = {
                 didChangeWatchedFiles = {
