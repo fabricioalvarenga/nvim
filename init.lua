@@ -14,6 +14,7 @@ local is_linux = has "linux"
 if is_mac then
     require("config.macos")
 end
+
 if is_win then
     require("config.windows")
 end

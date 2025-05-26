@@ -49,9 +49,9 @@ keymap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh file exp
 -- nvim-spectre plugin
 keymap.set("n", "<leader>ss", function()
    require("spectre").open()
-end, { desc = "Open Spectre"})
+end, { desc = "Open Spectre" })
 
 keymap.set("n", "<leader>sf", function()
-require("spectre").open_file_search()
-end, { desc = "Search on current file"})
+    require("spectre").open_file_search()
+end, { desc = "Search on current file" })
 
