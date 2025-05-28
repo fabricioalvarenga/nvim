@@ -36,6 +36,7 @@ require("lazy").setup({
         { import = "plugins.indentation" },
         { import = "plugins.comment" },
         { import = "plugins.spectre" },
+        { import = "plugins.treesitter" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
