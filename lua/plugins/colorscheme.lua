@@ -27,39 +27,39 @@ return {
             local highlights = {
                 -- ["@attribute"] = { fg = "#98C379" }, -- Verde claro
 
-                ["Conditional"] = { fg = "#EF74A8", bold = true },       -- Rosa vibrante
-                ["@conditional"] = { fg = "#EF74A8", bold = true },      -- Rosa vibrante
-                ["@constructor"] = { fg = "#EF74A8", bold = true },      -- Rosa vibrante
-                ["Keyword"] = { fg = "#EF74A8", bold = true },           -- Rosa vibrante
-                ["@keyword"] = { fg = "#EF74A8", bold = true },          -- Rosa vibrante
-                ["@keyword.conditional"] = { fg = "#EF74A8" },           -- Rosa vibrante
-                ["@keyword.exception"] = { fg = "#EF74A8" },             -- Rosa vibrante
-                ["@keyword.function"] = { fg = "#EF74A8", bold = true }, -- Rosa Vibrante
-                ["@keyword.import"] = { fg = "#EF74A8", bold = true },   -- Rosa vibrante
-                ["@keyword.repeat"] = { fg = "#EF74A8", bold = true },   -- Rosa Vibrante
-                ["@keyword.return"] = { fg = "#EF74A8", bold = true },   -- Rosa Vibrante
-                ["@boolean"] = { fg = "#FFD580" },                       -- Amarelo claro
-                ["@keyword.directive"] = { fg = "#FFD580" },             -- Amarelo claro
-                ["Number"] = { fg = "#FFD580" },                         -- Amarelo claro
-                ["@number"] = { fg = "#FFD580" },                        -- Amarelo claro
-                ["@punctuation"] = { fg = "#ABB2BF" },                   -- Cinza claro
-                ["@punctuation.bracket"] = { fg = "#ABB2BF" },           -- Cinza claro
-                ["@punctuation.delimiter"] = { fg = "#ABB2BF" },         -- Cinza claro
-                ["@punctuation.special"] = { fg = "#ABB2BF" },           -- Cinza claro
-                ["@parameter"] = { fg = "#C678DD" },                     -- Roxo saturado
-                ["@variable.member"] = { fg = "#C678DD" },               -- Roxo saturado
-                ["@variable.parameter"] = { fg = "#C678DD" },            -- Roxo saturado
-                ["Function"] = { fg = "#61AFEF" },                       -- Azul claro
-                ["@function"] = { fg = "#61AFEF" },                      -- Azul claro
-                ["@function.call"] = { fg = "#61AFEF" },                 -- Azul claro
-                ["@exception"] = { fg = "#E06C75" },                     -- Vermelho rosado
-                ["@variable.builtin"] = { fg = "#E06C75" },              -- Vermelho rosado
-                ["@operator"] = { fg = "#FFFFFF" },                      -- Branco
-                ["@variable"] = { fg = "#FFFFFF" },                      -- Branco
-                ["@comment"] = { fg = "#5C6370" },                       -- Cinza opaco
-                ["@string"] = { fg = "#C41A16" },                        -- Vermelho escuro
-                ["@attribute"] = { fg = "#8866B1", bold = true },        -- Roxo escuro
-                ["@type"] = { fg = "#98C379" },                          -- Verde claro
+                ["Conditional"] = { fg = "#EF74A8", bold = true },          -- Rosa vibrante
+                ["@conditional"] = { fg = "#EF74A8", bold = true },         -- Rosa vibrante
+                ["@constructor"] = { fg = "#EF74A8", bold = true },         -- Rosa vibrante
+                ["Keyword"] = { fg = "#EF74A8", bold = true },              -- Rosa vibrante
+                ["@keyword"] = { fg = "#EF74A8", bold = true },             -- Rosa vibrante
+                ["@keyword.conditional"] = { fg = "#EF74A8", bold = true }, -- Rosa vibrante
+                ["@keyword.exception"] = { fg = "#EF74A8", bold = true },   -- Rosa vibrante
+                ["@keyword.function"] = { fg = "#EF74A8", bold = true },    -- Rosa Vibrante
+                ["@keyword.import"] = { fg = "#EF74A8", bold = true },      -- Rosa vibrante
+                ["@keyword.repeat"] = { fg = "#EF74A8", bold = true },      -- Rosa Vibrante
+                ["@keyword.return"] = { fg = "#EF74A8", bold = true },      -- Rosa Vibrante
+                ["@boolean"] = { fg = "#FFD580" },                          -- Amarelo claro
+                ["@keyword.directive"] = { fg = "#FFD580" },                -- Amarelo claro
+                ["Number"] = { fg = "#FFD580" },                            -- Amarelo claro
+                ["@number"] = { fg = "#FFD580" },                           -- Amarelo claro
+                ["@punctuation"] = { fg = "#ABB2BF" },                      -- Cinza claro
+                ["@punctuation.bracket"] = { fg = "#ABB2BF" },              -- Cinza claro
+                ["@punctuation.delimiter"] = { fg = "#ABB2BF" },            -- Cinza claro
+                ["@punctuation.special"] = { fg = "#ABB2BF" },              -- Cinza claro
+                ["@parameter"] = { fg = "#C678DD" },                        -- Roxo saturado
+                ["@variable.parameter"] = { fg = "#C678DD" },               -- Roxo saturado
+                ["@attribute"] = { fg = "#C678DD", bold = true },           -- Roxo saturado
+                ["@variable.member"] = { fg = "#8866B1" },                  -- Roxo escuro
+                ["Function"] = { fg = "#61AFEF" },                          -- Azul claro
+                ["@function"] = { fg = "#61AFEF" },                         -- Azul claro
+                ["@function.call"] = { fg = "#61AFEF" },                    -- Azul claro
+                ["@exception"] = { fg = "#E06C75" },                        -- Vermelho rosado
+                ["@variable.builtin"] = { fg = "#E06C75" },                 -- Vermelho rosado
+                ["@operator"] = { fg = "#FFFFFF" },                         -- Branco
+                ["@variable"] = { fg = "#FFFFFF" },                         -- Branco
+                ["@comment"] = { fg = "#5C6370" },                          -- Cinza opaco
+                ["@string"] = { fg = "#C41A16" },                           -- Vermelho escuro
+                ["@type"] = { fg = "#98C379" },                             -- Verde claro
                 ["@character"] = { fg = "#FF0000" },
                 ["@character.special"] = { fg = "#FF0000" },
                 ["@comment.error"] = { fg = "#FF0000" },
