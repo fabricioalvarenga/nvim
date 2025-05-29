@@ -24,7 +24,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
         -- Add LazyVim 
-        { "LazyVim/LazyVim" },
+        { "LazyVim/LazyVim", },
 
         -- Import plugins
         { import = "plugins.lsp.lsp" },
