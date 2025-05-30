@@ -58,7 +58,7 @@ return {
                 ["@operator"] = { fg = "#FFFFFF" },                         -- Branco
                 ["@variable"] = { fg = "#FFFFFF" },                         -- Branco
                 ["@comment"] = { fg = "#5C6370" },                          -- Cinza opaco
-                ["@string"] = { fg = "#C41A16" },                           -- Vermelho escuro
+                ["@string"] = { fg = "#C0685D" },                           -- Marrom
                 ["@type"] = { fg = "#98C379" },                             -- Verde claro
                 ["@character"] = { fg = "#FF0000" },
                 ["@character.special"] = { fg = "#FF0000" },
