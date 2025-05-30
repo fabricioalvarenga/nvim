@@ -38,7 +38,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Open file explorer
-keymap.set("n", "ex", ":Ex<Return>", opts)
+--keymap.set("n", "ex", ":Ex<Return>", opts)
 
 -- nvim-tree plugin
 keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
@@ -55,3 +55,9 @@ keymap.set("n", "<leader>sf", function()
     require("spectre").open_file_search()
 end, { desc = "Search on current file" })
 
+-- telescope pllugin
+local builtin = require("telescope.builtin")
+keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
+keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope find files" })
+keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope find files" })
+keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope find files" })
