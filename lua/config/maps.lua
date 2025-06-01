@@ -41,10 +41,10 @@ keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("i", "ee", "<Escape>")
 
 -- nvim-tree plugin
-keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
-keymap.set("n", "<leader>ef", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current filed" })
-keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
-keymap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
+keymap.set("n", "tt", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
+keymap.set("n", "tf", ":NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
+keymap.set("n", "tc", ":NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
+keymap.set("n", "tr", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
 
 -- nvim-spectre plugin
 local spectre = require("spectre")
