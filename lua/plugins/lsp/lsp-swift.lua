@@ -13,9 +13,7 @@ function LSP.setup(lspconfig)
                 ".git"
             )(filename)
         end,
-        -- init_options = {
-        --     compilationDatabase = vim.fn.getcwd() .. "/compile_commands.json"
-        -- }, 
+
         settings = { 
             sourcekit_lsp = {
                 index = {
@@ -24,6 +22,7 @@ function LSP.setup(lspconfig)
                 },
             },
         },
+
         capabilities = {
             workspace = {
                 didChangeWatchedFiles = {
@@ -31,6 +30,11 @@ function LSP.setup(lspconfig)
                 },
             },
         },
+
+        -- Disable semantic highlighting, allowing Treesitter to perform highlighting
+        on_attach = function(client, bufnr)
+            client.server_capabilities.semanticTokensProvider = nil
+        end,
     })
 end
 

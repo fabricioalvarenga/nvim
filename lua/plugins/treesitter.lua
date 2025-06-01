@@ -12,8 +12,7 @@ return {
             highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = false,
-                use_languagetree = true, -- Force Treesitter to take priority over LSP highlight
-            }
+            },
         })
     end,
 }
