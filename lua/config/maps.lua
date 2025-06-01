@@ -37,8 +37,8 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
--- Open file explorer
---keymap.set("n", "ex", ":Ex<Return>", opts)
+-- Map ESC key 
+keymap.set("i", "ee", "<Escape>")
 
 -- nvim-tree plugin
 keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
@@ -47,17 +47,13 @@ keymap.set("n", "<leader>ec", ":NvimTreeCollapse<CR>", { desc = "Collapse file e
 keymap.set("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
 
 -- nvim-spectre plugin
-keymap.set("n", "<leader>ss", function()
-   require("spectre").open()
-end, { desc = "Open Spectre" })
-
-keymap.set("n", "<leader>sf", function()
-    require("spectre").open_file_search()
-end, { desc = "Search on current file" })
+local spectre = require("spectre")
+keymap.set("n", "sr", function() spectre.open() end, { desc = "Open Spectre" })
+keymap.set("n", "sf", function() spectre.open_file_search() end, { desc = "Open Spectre" })
 
 -- telescope pllugin
 local builtin = require("telescope.builtin")
-keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope find files" })
-keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope find files" })
-keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope find files" })
+keymap.set("n", "ff", builtin.find_files, { desc = "Telescope find files" })
+keymap.set("n", "fg", builtin.live_grep, { desc = "Telescope find files" })
+keymap.set("n", "fb", builtin.buffers, { desc = "Telescope find files" })
+keymap.set("n", "fh", builtin.help_tags, { desc = "Telescope find files" })
