@@ -38,7 +38,7 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
 -- Map ESC key 
-keymap.set("i", "ee", "<Escape>")
+keymap.set("i", "qq", "<Escape>")
 
 -- nvim-tree plugin
 keymap.set("n", "tt", ":NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
