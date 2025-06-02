@@ -15,51 +15,70 @@ return {
             --
             local xcode_colors = {
                 dark = {
-
+                    vibrant_pink = "#EF74A8",
+                    light_yellow = "#FFD580",
+                    ligth_gray = "#ABB2BF",
+                    satured_purple = "#C678DD",
+                    dark_purple = "#8866B1",
+                    light_blue = "#61AFEF",
+                    pinkish_red = "#E06C75",
+                    white = "#FFFFFF",
+                    dull_gray = "#5C6370",
+                    brown = "#C0685D",
+                    light_green = "#98C379",
                 },
                 light = {
-                },
+                     vibrant_pink = "#EF74A8",
+                    light_yellow = "#FFD580",
+                    ligth_gray = "#ABB2BF",
+                    satured_purple = "#C678DD",
+                    dark_purple = "#8866B1",
+                    light_blue = "#61AFEF",
+                    pinkish_red = "#E06C75",
+                    white = "#FFFFFF",
+                    dull_gray = "#5C6370",
+                    brown = "#C0685D",
+                    light_green = "#98C379",
+               },
             }
 
             local is_dark = vim.o.background == "dark"
             local colors = is_dark and xcode_colors.dark or xcode_colors.light
 
             local highlights = {
-                -- ["@attribute"] = { fg = "#98C379" }, -- Verde claro
-
-                ["Conditional"] = { fg = "#EF74A8", bold = true },          -- Rosa vibrante
-                ["@conditional"] = { fg = "#EF74A8", bold = true },         -- Rosa vibrante
-                ["@constructor"] = { fg = "#EF74A8", bold = true },         -- Rosa vibrante
-                ["Keyword"] = { fg = "#EF74A8", bold = true },              -- Rosa vibrante
-                ["@keyword"] = { fg = "#EF74A8", bold = true },             -- Rosa vibrante
-                ["@keyword.conditional"] = { fg = "#EF74A8", bold = true }, -- Rosa vibrante
-                ["@keyword.exception"] = { fg = "#EF74A8", bold = true },   -- Rosa vibrante
-                ["@keyword.function"] = { fg = "#EF74A8", bold = true },    -- Rosa Vibrante
-                ["@keyword.import"] = { fg = "#EF74A8", bold = true },      -- Rosa vibrante
-                ["@keyword.repeat"] = { fg = "#EF74A8", bold = true },      -- Rosa Vibrante
-                ["@keyword.return"] = { fg = "#EF74A8", bold = true },      -- Rosa Vibrante
-                ["@boolean"] = { fg = "#FFD580" },                          -- Amarelo claro
-                ["@keyword.directive"] = { fg = "#FFD580" },                -- Amarelo claro
-                ["Number"] = { fg = "#FFD580" },                            -- Amarelo claro
-                ["@number"] = { fg = "#FFD580" },                           -- Amarelo claro
-                ["@punctuation"] = { fg = "#ABB2BF" },                      -- Cinza claro
-                ["@punctuation.bracket"] = { fg = "#ABB2BF" },              -- Cinza claro
-                ["@punctuation.delimiter"] = { fg = "#ABB2BF" },            -- Cinza claro
-                ["@punctuation.special"] = { fg = "#ABB2BF" },              -- Cinza claro
-                ["@parameter"] = { fg = "#C678DD" },                        -- Roxo saturado
-                ["@variable.parameter"] = { fg = "#C678DD" },               -- Roxo saturado
-                ["@attribute"] = { fg = "#C678DD", bold = true },           -- Roxo saturado
-                ["@variable.member"] = { fg = "#8866B1" },                  -- Roxo escuro
-                ["Function"] = { fg = "#61AFEF" },                          -- Azul claro
-                ["@function"] = { fg = "#61AFEF" },                         -- Azul claro
-                ["@function.call"] = { fg = "#61AFEF" },                    -- Azul claro
-                ["@exception"] = { fg = "#E06C75" },                        -- Vermelho rosado
-                ["@variable.builtin"] = { fg = "#E06C75" },                 -- Vermelho rosado
-                ["@operator"] = { fg = "#FFFFFF" },                         -- Branco
-                ["@variable"] = { fg = "#FFFFFF" },                         -- Branco
-                ["@comment"] = { fg = "#5C6370" },                          -- Cinza opaco
-                ["@string"] = { fg = "#C0685D" },                           -- Marrom
-                ["@type"] = { fg = "#98C379" },                             -- Verde claro
+                ["Conditional"] = { fg = colors.vibrant_pink, bold = true },
+                ["@conditional"] = { fg = colors.vibrant_pink, bold = true },
+                ["@constructor"] = { fg = colors.vibrant_pink, bold = true },
+                ["Keyword"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword.conditional"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword.exception"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword.function"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword.import"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword.repeat"] = { fg = colors.vibrant_pink, bold = true },
+                ["@keyword.return"] = { fg = colors.vibrant_pink, bold = true },
+                ["@boolean"] = { fg = colors.light_yellow },
+                ["@keyword.directive"] = { fg = colors.light_yellow },
+                ["Number"] = { fg = colors.light_yellow },
+                ["@number"] = { fg = colors.light_yellow },
+                ["@punctuation"] = { fg = colors.light_gray },
+                ["@punctuation.bracket"] = { fg = colors.light_gray },
+                ["@punctuation.delimiter"] = { fg = colors.light_gray },
+                ["@punctuation.special"] = { fg = colors.light_gray },
+                ["@parameter"] = { fg = colors.satured_purple },
+                ["@variable.parameter"] = { fg = colors.satured_purple },
+                ["@attribute"] = { fg = colors.satured_purple, bold = true },
+                ["@variable.member"] = { fg = colors.dark_purple },
+                ["Function"] = { fg = colors.light_blue },
+                ["@function"] = { fg = colors.light_blue },
+                ["@function.call"] = { fg = colors.light_blue },
+                ["@exception"] = { fg = colors.pinkish_red },
+                ["@variable.builtin"] = { fg = colors.pinkish_red },
+                ["@operator"] = { fg = colors.white },
+                ["@variable"] = { fg = colors.white },
+                ["@comment"] = { fg = colors.dull_gray },
+                ["@string"] = { fg = colors.brown },
+                ["@type"] = { fg = colors.ligth_green },
                 ["@character"] = { fg = "#FF0000" },
                 ["@character.special"] = { fg = "#FF0000" },
                 ["@comment.error"] = { fg = "#FF0000" },
