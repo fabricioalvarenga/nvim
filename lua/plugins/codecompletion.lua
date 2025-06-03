@@ -18,7 +18,7 @@ return {
 
         cmp.setup({
             formatting = {
-                format = lspkind.cmp_format({ width_text = true, maxwidth = 50 }),
+                format = lspkind.cmp_format({ width_text = true, maxwidth = 100 }),
                 autocomplete = true,
             },
 
