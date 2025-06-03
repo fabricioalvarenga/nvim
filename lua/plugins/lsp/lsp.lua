@@ -1,14 +1,20 @@
--- Hotkey configuration for LSP
--- local function setup_global_lsp_mappings()
---      vim.api.nvim_create_autocmd("LspAttach", {
---         desc = "LSP Actions",
---         callback = function(args)
---             vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true }) -- Shows information about what is under the cursor
---             vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true }) -- Go to definition
---         end,
---     })
--- end
--- setup_global_lsp_mappings()
+-- Diagnostic visual settings
+vim.diagnostic.config({
+    virtual_text = {
+        prefix = "●",
+        spacing = 2,
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
+
+local signs = { Error = "✘", Warn = "▲", Hint = "∙", Info = "i" }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 return {
     "neovim/nvim-lspconfig",
