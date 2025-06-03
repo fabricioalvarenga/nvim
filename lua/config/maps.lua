@@ -53,9 +53,23 @@ local spectre = require("spectre")
 keymap.set("n", "sr", function() spectre.open() end, { desc = "Open Spectre" })
 keymap.set("n", "sf", function() spectre.open_file_search() end, { desc = "Open Spectre" })
 
--- telescope pllugin
-local builtin = require("telescope.builtin")
-keymap.set("n", "ff", builtin.find_files, { desc = "Telescope find files" })
-keymap.set("n", "fg", builtin.live_grep, { desc = "Telescope find files" })
-keymap.set("n", "fb", builtin.buffers, { desc = "Telescope find files" })
-keymap.set("n", "fh", builtin.help_tags, { desc = "Telescope find files" })
+-- telescope plugin
+local telescope = require("telescope.builtin")
+keymap.set("n", "ff", telescope.find_files, { desc = "Telescope find files" })
+keymap.set("n", "fg", telescope.live_grep, { desc = "Telescope find files" })
+keymap.set("n", "fb", telescope.buffers, { desc = "Telescope find files" })
+keymap.set("n", "fh", telescope.help_tags, { desc = "Telescope find files" })
+
+-- LSP
+local function setup_global_lsp_mappings()
+     vim.api.nvim_create_autocmd("LspAttach", {
+        desc = "LSP Actions",
+        callback = function(args)
+            vim.keymap.set("n", "K", vim.lsp.buf.hover, { noremap = true, silent = true }) -- Shows information about what is under the cursor
+            vim.keymap.set("n", "gd", vim.lsp.buf.definition, { noremap = true, silent = true }) -- Go to definition
+        end,
+    })
+end
+setup_global_lsp_mappings()
+
+
