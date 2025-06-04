@@ -4,6 +4,7 @@ vim.diagnostic.config({
         prefix = "●",
         spacing = 2,
     },
+
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = "✘",
@@ -12,16 +13,11 @@ vim.diagnostic.config({
             [vim.diagnostic.severity.INFO] = "i",
         },
     },
+
     underline = true,
     update_in_insert = false,
     severity_sort = true,
 })
-
--- local signs = { Error = "✘", Warn = "▲", Hint = "∙", Info = "i" }
--- for type, icon in pairs(signs) do
---     local hl = "DiagnosticSign" .. type
---     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
--- end
 
 return {
     "neovim/nvim-lspconfig",
