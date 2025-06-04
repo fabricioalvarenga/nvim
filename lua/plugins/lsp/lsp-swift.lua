@@ -4,7 +4,8 @@ function LSP.setup(lspconfig)
     -- Configure Swift
     lspconfig.sourcekit.setup({
         cmd = { "sourcekit-lsp" },
-        filetypes = { "swift", "objective-c", "objective-cpp" },
+        filetypes = { "swift", "c", "cpp", "objective-c", "objective-cpp" },
+
         root_dir = function(filename)
             return require("lspconfig.util").root_pattern(
                 "*.xcworkspace",
@@ -14,7 +15,7 @@ function LSP.setup(lspconfig)
             )(filename)
         end,
 
-        settings = { 
+        settings = {
             sourcekit_lsp = {
                 index = {
                     enable = true,
