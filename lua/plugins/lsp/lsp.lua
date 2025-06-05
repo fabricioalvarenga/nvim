@@ -22,6 +22,8 @@ vim.diagnostic.config({
 return {
     "neovim/nvim-lspconfig",
 
+    dependencies = { "folke/neoconf.nvim" },
+
     config = function()
         local lspconfig = require("lspconfig")
 

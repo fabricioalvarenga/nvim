@@ -27,6 +27,7 @@ require("lazy").setup({
         { "LazyVim/LazyVim", },
 
         -- Import plugins
+        { import = "plugins.neoconf" }, -- Import always before LSP
         { import = "plugins.lsp.lsp" },
         { import = "plugins.codecompletion" },
         { import = "plugins.colorscheme" },
