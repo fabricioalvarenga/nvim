@@ -39,6 +39,7 @@ require("lazy").setup({
         { import = "plugins.spectre" },
         { import = "plugins.treesitter" },
         { import = "plugins.telescope" },
+        { import = "plugins.tmux-navigator" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
