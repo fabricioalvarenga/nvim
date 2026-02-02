@@ -6,10 +6,10 @@ return {-- Start lualine plugin (I couldn't start it from the lualine.lua file)
 
         lualine.setup({
             options = {
-                icons_enabled = false,
+                icons_enabled = true,
                 theme = "material",
-                component_separators = { left = ">", right = "<"},
-                section_separators = { left = ">>", right = "<<"},
+                component_separators = { left = "", right = ""},
+                section_separators = { left = "", right = ""},
                 disabled_filetypes = {
                   statusline = {},
                   winbar = {},
