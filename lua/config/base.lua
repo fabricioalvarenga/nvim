@@ -34,6 +34,15 @@ vim.api.nvim_create_autocmd("InsertLeave", {
     command = "set nopaste"
 })
 
+
+-- Configures ":make" command to C compiler
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "c",
+    callback = function()
+        vim.bo.makeprg = "cc -Wall -Wextra -Werror -o %< %"
+    end,
+})
+
 -- Add asterisks in block comments
 vim.opt.formatoptions:append { "r" }
 
