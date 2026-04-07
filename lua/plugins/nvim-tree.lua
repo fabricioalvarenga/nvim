@@ -21,10 +21,19 @@ return {
                     enable = true,
                 },
                 icons = {
+                    show = {
+                        file = false,
+                        folder  = false,
+                        folder_arrow = true,
+                        git = true,
+                    },
                     glyphs = {
+                        default = ".",
+                        symlink = "→",
+                        bookmark = "★",
                         folder = {
-                            arrow_closed =  "",
-                            arrow_open = "",
+                            arrow_closed = "▶",
+                            arrow_open = "▼",
                         },
                     },
                 },
