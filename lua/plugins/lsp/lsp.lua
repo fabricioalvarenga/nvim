@@ -1,23 +1,23 @@
 -- Diagnostic visual settings
-vim.diagnostic.config({
-    virtual_text = {
-        prefix = "●",
-        spacing = 2,
-    },
-
-    signs = {
-        text = {
-            [vim.diagnostic.severity.ERROR] = "✘",
-            [vim.diagnostic.severity.WARN] = "▲",
-            [vim.diagnostic.severity.HINT] = "∙",
-            [vim.diagnostic.severity.INFO] = "i",
-        },
-    },
-
-    underline = true,
-    update_in_insert = false,
-    severity_sort = true,
-})
+-- vim.diagnostic.config({
+--     virtual_text = {
+--         prefix = "●",
+--         spacing = 2,
+--     },
+--
+--     signs = {
+--         text = {
+--             [vim.diagnostic.severity.ERROR] = "✘",
+--             [vim.diagnostic.severity.WARN] = "▲",
+--             [vim.diagnostic.severity.HINT] = "∙",
+--             [vim.diagnostic.severity.INFO] = "i",
+--         },
+--     },
+--
+--     underline = true,
+--     update_in_insert = false,
+--     severity_sort = true,
+-- })
 
 return {
     "neovim/nvim-lspconfig",
@@ -25,11 +25,14 @@ return {
     dependencies = { "folke/neoconf.nvim" },
 
     config = function()
+        require("neoconf").setup()
+
         local lspconfig = require("lspconfig")
 
         require("plugins.lsp.lsp-lua").setup(lspconfig)
         require("plugins.lsp.lsp-c").setup(lspconfig)
         require("plugins.lsp.lsp-swift").setup(lspconfig)
         require("plugins.lsp.lsp-python").setup(lspconfig)
+        require("plugins.lsp.lsp-marksman").setup(lspconfig)
     end
 }
