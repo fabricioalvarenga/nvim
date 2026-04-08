@@ -1,7 +1,7 @@
 return {
     "nvim-tree/nvim-tree.lua",
 
-    dependencies = "nvim-tree/nvim-web-devicons",
+    -- dependencies = "nvim-tree/nvim-web-devicons", -- Use this dependency only in iTerm2, as the macOS Terminal does not support certain font types (Nerd Fonts, for example)
 
     config = function()
         local nvimtree = require("nvim-tree")
