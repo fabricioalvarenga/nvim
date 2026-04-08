@@ -11,9 +11,9 @@ function LSP.setup(lspconfig)
     lspconfig.clangd.setup({
         cmd = { "clangd" }, -- clangd path (define full path if necessary)
         filetypes = { "c", "cpp", "objc", "objcpp" },
-        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".gt"),
         capabilities = require("cmp_nvim_lsp").default_capabilities(), -- Enable autocompletion 
     })
 end
 
-return LSP 
+return LSP
