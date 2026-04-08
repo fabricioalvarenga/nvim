@@ -1,6 +1,7 @@
 require("config.lazy")
 require("config.base")
 require("config.maps")
+require("config.diagnostics")
 --require('config.highlights')
 
 local has = function(x)
