@@ -40,6 +40,7 @@ require("lazy").setup({
         { import = "plugins.treesitter" },
         { import = "plugins.telescope" },
         { import = "plugins.tmux-navigator" },
+        { import = "plugins.render-markdown" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },
