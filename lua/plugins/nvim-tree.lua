@@ -22,9 +22,9 @@ return {
                 },
                 icons = {
                     show = {
-                        file = false,
-                        folder  = false,
-                        folder_arrow = true,
+                        file = true,
+                        folder  = true,
+                        folder_arrow = false,
                         git = true,
                     },
                     glyphs = {
@@ -32,8 +32,23 @@ return {
                         symlink = "→",
                         bookmark = "★",
                         folder = {
-                            arrow_closed = "▶",
-                            arrow_open = "▼",
+--                            arrow_closed = "▶",
+--                            arrow_open = "▼",
+                            default = "+",
+                            open = "-",
+                            empty = "[]",
+                            empty_open = "[]",
+                            symlink = "→",
+                            symlink_open = "→",
+                        },
+                        git = {
+                            unstaged = "✗",
+                            staged = "✓",
+                            unmerged = "⚠",
+                            renamed = "→",
+                            untracked = "★",
+                            deleted = "−",
+                            ignored = "○",
                         },
                     },
                 },

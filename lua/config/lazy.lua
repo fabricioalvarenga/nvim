@@ -27,8 +27,9 @@ require("lazy").setup({
         { "LazyVim/LazyVim", },
 
         -- Import plugins
-        { import = "plugins.neoconf" }, -- Import always before LSP
+        { import = "plugins.neoconf" }, -- Import always before LSP 
         { import = "plugins.lsp.lsp" },
+        { import = "plugins.treesitter" },
         { import = "plugins.codecompletion" },
         { import = "plugins.colorscheme" },
         { import = "plugins.lualine" },
@@ -37,10 +38,8 @@ require("lazy").setup({
         { import = "plugins.indentation" },
         { import = "plugins.comment" },
         { import = "plugins.spectre" },
-        { import = "plugins.treesitter" },
         { import = "plugins.telescope" },
         { import = "plugins.tmux-navigator" },
-        { import = "plugins.render-markdown" },
 
 	-- Import any extras modules here
 --	{ import = "lazyvim.plugins.extras.lang.json" },

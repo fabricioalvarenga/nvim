@@ -1,6 +1,6 @@
 local LSP = {}
 
-function LSP.setup(lspconfig)
+function LSP.setup()
    -- Check if lua-language-server is installed
     if vim.fn.executable("lua-language-server") == 0 then
         vim.notify("lua-language-server is not installed. Install it with: brew install lua-language-server", vim.log.levels.WARN)
@@ -8,7 +8,7 @@ function LSP.setup(lspconfig)
     end
 
     -- Configure lua-language-server 
-    lspconfig.lua_ls.setup({
+    vim.lsp.config("lua_ls", {
         on_init = function(client)
             if client.workspace_folders then
                 local path = client.workspace_folders[1].name
@@ -40,6 +40,8 @@ function LSP.setup(lspconfig)
         end,
         settings = { Lua = {} }
     })
+
+    vim.lsp.enable("lua_ls")
 end
 
 return LSP

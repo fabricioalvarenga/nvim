@@ -1,6 +1,6 @@
 local LSP = {}
 
-function LSP.setup(lspconfig)
+function LSP.setup()
    -- Check if clangd is installed
    if vim.fn.executable("clangd") == 0 then
         vim.notify("clangd is not installed. Download it from https://github.com/clangd/clangd/releases/", vim.log.levels.WARN)
@@ -8,12 +8,10 @@ function LSP.setup(lspconfig)
     end
 
     -- Configure clangd for C and C++
-    lspconfig.clangd.setup({
-        cmd = { "clangd" }, -- clangd path (define full path if necessary)
-        filetypes = { "c", "cpp", "objc", "objcpp" },
-        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt", ".gt"),
-        capabilities = require("cmp_nvim_lsp").default_capabilities(), -- Enable autocompletion 
+    vim.lsp.config("clangd", {
+        cmd = { "clangd" },
     })
+    vim.lsp.enable("clangd")
 end
 
 return LSP

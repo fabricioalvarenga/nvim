@@ -4,8 +4,8 @@ return {
     build = ":TSUpdate",
 
     config = function()
-        require("nvim-treesitter.configs").setup({
-            ensurre_installed = { "swift", "markdown", "markdown_inline" },
+        require("nvim-treesitter.config").setup({
+            ensure_installed = { "lua", "python", "swift" },
 
             highlight = {
                 enable = true,
