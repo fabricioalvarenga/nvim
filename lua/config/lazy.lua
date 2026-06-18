@@ -36,7 +36,6 @@ require("lazy").setup({
         { import = "plugins.autopairs" },
         { import = "plugins.nvim-tree" },
         { import = "plugins.indentation" },
-        { import = "plugins.comment" },
         { import = "plugins.spectre" },
         { import = "plugins.telescope" },
         { import = "plugins.tmux-navigator" },
